@@ -14,6 +14,7 @@ var planSchema = new Schema({
     "patientid": String,
     "invoice": String,
     'clinicid': String,
+    'total': String,
 });
 
 module.exports = mongoose.model("dueamount", planSchema);

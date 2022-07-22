@@ -87,10 +87,9 @@ module.exports = {
         });
       }
 
-      Patient.status = req.body.status
-        ? req.body.status
-        : Patient.status;
-
+      Patient.status = req.body.status? req.body.status: Patient.status;
+      Patient.pharmacystatus = req.body.pharmacystatus? req.body.pharmacystatus: Patient.pharmacystatus;
+      
 
       Patient.save(function (err, Patient) {
         console.log(err);

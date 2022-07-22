@@ -17,6 +17,7 @@ var UserSchema = new Schema({
 	'status': String,
 	'clinicid': String,
 	'doctorid': String,
+	'pharmacystatus': Array,
 });
 
 module.exports = mongoose.model('Feedback', UserSchema);
