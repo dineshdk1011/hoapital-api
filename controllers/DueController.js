@@ -50,7 +50,6 @@ module.exports = {
      * PatientController.create()
      */
     create: function (req, res) {
-        console.log(req.body);
         var Patient = new GalleryModel(req.body);
         Patient.save(function (err, Patient) {
             if (err) {

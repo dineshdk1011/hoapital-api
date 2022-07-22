@@ -45,7 +45,6 @@ var DossRoutes = require("./routes/DossRouter");
 var InstructionRoutes = require("./routes/InstructionRoutes");
 var MedicineplanRoutes = require("./routes/MedicineplanRoutes");
 var MessageRoutes = require("./routes/MessageRoutes");
-var VisitRoutes = require("./routes/VisitRouter");
 
 var app = express();
 const mongoDB = require("./config/database");
@@ -102,7 +101,6 @@ app.use("/Doss", DossRoutes);
 app.use("/Instruction", InstructionRoutes);
 app.use("/Medicineplan", MedicineplanRoutes);
 app.use("/Message", MessageRoutes);
-app.use("/Visit", VisitRoutes);
 
 
 
