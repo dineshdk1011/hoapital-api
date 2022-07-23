@@ -15,7 +15,9 @@ var PdrugmasterSchema = new Schema({
     'expiry': String,
     'doss': String,
     'instruction': String,
-    'salt': String
+    'salt': String,
+    'dossvale': Array,
+    'stockvalue': Array
 });
 
 module.exports = mongoose.model('drug', PdrugmasterSchema);
