@@ -71,7 +71,7 @@ module.exports = {
    */
   update: function (req, res) {
     var id = req.params.id;
-    console.log(id,"helo");
+    console.log(id, "helo");
 
     FeedbackModel.findOne({ _id: id }, function (err, Patient) {
       if (err) {
@@ -87,9 +87,11 @@ module.exports = {
         });
       }
 
-      Patient.status = req.body.status? req.body.status: Patient.status;
-      Patient.pharmacystatus = req.body.pharmacystatus? req.body.pharmacystatus: Patient.pharmacystatus;
-      
+      Patient.status = req.body.status ? req.body.status : Patient.status;
+      Patient.pharmacystatus = req.body.pharmacystatus ? req.body.pharmacystatus : Patient.pharmacystatus;
+      Patient.stockarray = req.body.stockarray ? req.body.stockarray : Patient.stockarray;
+      Patient.dossarray = req.body.dossarray ? req.body.dossarray : Patient.dossarray;
+
 
       Patient.save(function (err, Patient) {
         console.log(err);

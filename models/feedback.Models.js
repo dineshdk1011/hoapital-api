@@ -18,6 +18,8 @@ var UserSchema = new Schema({
 	'clinicid': String,
 	'doctorid': String,
 	'pharmacystatus': Array,
+	'stockarray': Array,
+	'dossarray': Array,
 });
 
 module.exports = mongoose.model('Feedback', UserSchema);
