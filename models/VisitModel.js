@@ -3,6 +3,7 @@ var Schema = mongoose.Schema;
 
 var VisitSchema = new Schema({
     "visitDate": String,
+    "visitTime": String,
     "appointmentId": String,
     "visitReason": String,
     'bp': String,

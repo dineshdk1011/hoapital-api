@@ -50,10 +50,12 @@ module.exports = {
   },
 
   login: async function (req, res) {
+    console.log(req.body);
     let user = await clinicDoctors.findOne({
       email: req.body.email,
       rolename: req.body.role,
     });
+    console.log(user);
     if (user) {
       let passwordresult = await bcrypt.compare(
         req.body.password,
@@ -117,7 +119,7 @@ module.exports = {
       pincode: req.body.pincode,
       doctorid: req.body.doctorid,
       cheifdoctor: req.body.cheifdoctor,
-      access: req.body.access
+      access: req.body.access,
     });
 
     User.save(function (err, User) {
@@ -218,10 +220,7 @@ module.exports = {
       User.clinicLince = req.body.clinicLince
         ? req.body.clinicLince
         : User.clinicLince;
-      User.access = req.body.access
-        ? req.body.access
-        : User.access;
-
+      User.access = req.body.access ? req.body.access : User.access;
 
       User.save(function (err, User) {
         if (err) {

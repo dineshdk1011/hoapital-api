@@ -47,6 +47,7 @@ var MedicineplanRoutes = require("./routes/MedicineplanRoutes");
 var MessageRoutes = require("./routes/MessageRoutes");
 var VisitRoutes = require("./routes/VisitRoutes");
 var PriceplanRoutes = require("./routes/PriceplanRoutes");
+var RoleManagementRoutes = require("./routes/RoleManagement");
 
 var app = express();
 const mongoDB = require("./config/database");
@@ -105,6 +106,7 @@ app.use("/Medicineplan", MedicineplanRoutes);
 app.use("/Message", MessageRoutes);
 app.use("/visit", VisitRoutes);
 app.use("/Priceplan", PriceplanRoutes);
+app.use("/RoleManagement", RoleManagementRoutes);
 
 
 
