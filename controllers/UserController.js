@@ -40,12 +40,10 @@ module.exports = {
       }
 
       if (!User) {
-        return res.status(404).json({
-          message: "No such User",
-        });
+        return res.send([]);
       }
 
-      return res.json(User);
+      return res.send(User);
     });
   },
 
