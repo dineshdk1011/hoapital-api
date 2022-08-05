@@ -103,7 +103,8 @@ module.exports = {
             drug.doss = req.body.doss ? req.body.doss : drug.doss;
             drug.instruction = req.body.instruction ? req.body.instruction : drug.instruction;
             drug.salt = req.body.salt ? req.body.salt : drug.salt;
-
+            drug.dossvale = req.body.dossvale ? req.body.dossvale : drug.dossvale;
+            drug.stockvalue = req.body.stockvalue ? req.body.stockvalue : drug.stockvalue;
             drug.save(function (err, drug) {
                 if (err) {
                     return res.status(500).json({
